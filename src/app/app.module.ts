@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddExchangeComponent } from './currency-convertor/add-exchange-component/add-exchange.component';
 import { CurrencyConverterComponent } from './currency-convertor/currency-converter.component';
 import { LengthConverterComponent } from './length-converter/length-converter.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { LengthConverterComponent } from './length-converter/length-converter.co
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

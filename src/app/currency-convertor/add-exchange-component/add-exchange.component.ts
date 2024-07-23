@@ -53,7 +53,8 @@ export class AddExchangeComponent {
     'ZAR',
   ];
 
+  result:boolean = true;
   addExchange() {
-    this._converterService.addNewExchange(this.exchangeForm.value as Exchange)
+    this.result = this._converterService.addNewExchange(this.exchangeForm.value as Exchange)
   }
 }

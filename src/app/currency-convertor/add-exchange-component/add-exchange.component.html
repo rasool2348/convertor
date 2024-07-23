@@ -22,6 +22,7 @@
                 ADD
             </button>
             <p class="error" *ngIf="exchangeForm.controls.from.value == exchangeForm.controls.to.value && exchangeForm.controls.to.dirty">Both From and To units are the same</p>
+            <p class="error" *ngIf="!result">You had the same exchange before</p>
     </ng-container>
     
 </form>
