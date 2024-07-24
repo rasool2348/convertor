@@ -1,43 +1,42 @@
-.container{
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    margin: 1vw 0vw 1vw 0vw;
-    row-gap: 1vw;
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw 0vw 1vw 0vw;
+  row-gap: 1vw;
 }
-.content{
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    column-gap: 1vw;
+.content {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1vw;
 }
-.logs{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: 20vh;
-    overflow-y: auto;
-    width: 100%;
-    p{
-        margin: 0;
-        font-size: 1vw;
-    }
+.logs {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 20vh;
+  overflow-y: auto;
+  width: 100%;
+  p {
+    margin: 0;
+    font-size: 1vw;
+  }
 }
 @media only screen and (max-width: 515px) {
-    .content{
-        flex-direction: column;
-        row-gap: 1vw;
-        button > mat-icon[fontIcon = 'arrow_forward']{
-            transform: rotate(90deg);
-        }
-        button > mat-icon[fontIcon = 'arrow_backward']{
-            transform: rotate(270deg);
-        }
+  .content {
+    flex-direction: column;
+    row-gap: 1vw;
+    button > mat-icon[fontIcon="arrow_forward"] {
+      transform: rotate(90deg);
     }
-    
+    button > mat-icon[fontIcon="arrow_backward"] {
+      transform: rotate(270deg);
+    }
+  }
 }

@@ -7,6 +7,6 @@ import { ConverterService } from './services/converter.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'convertor';
+  title = 'converter';
   constructor(public converterService:ConverterService){}
 }

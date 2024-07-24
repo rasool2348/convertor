@@ -1,7 +1,8 @@
-
 <mat-tab-group>
   <mat-tab label="Currerncy Converter">
-    <app-currency-converter [exchanges]="converterService.exchanges"></app-currency-converter>
+    <app-currency-converter
+      [exchanges]="converterService.exchanges"
+    ></app-currency-converter>
   </mat-tab>
   <mat-tab label="Length Converter">
     <app-length-converter></app-length-converter>

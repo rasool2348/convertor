@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
 import { Exchange } from '../../models/exchange';
 import { ConverterService } from '../../services/converter.service';
 
@@ -10,7 +9,10 @@ import { ConverterService } from '../../services/converter.service';
   styleUrl: './add-exchange.component.css',
 })
 export class AddExchangeComponent {
-  constructor(private _fb: FormBuilder,private _matDialogRef:MatDialogRef<AddExchangeComponent>,private _converterService:ConverterService) {}
+  constructor(
+    private _fb: FormBuilder,
+    private _converterService: ConverterService
+  ) {}
 
   exchangeForm = this._fb.group({
     from: this._fb.control(null, [Validators.required]),
@@ -53,8 +55,10 @@ export class AddExchangeComponent {
     'ZAR',
   ];
 
-  result:boolean = true;
+  result: boolean = true;
   addExchange() {
-    this.result = this._converterService.addNewExchange(this.exchangeForm.value as Exchange)
+    this.result = this._converterService.addNewExchange(
+      this.exchangeForm.value as Exchange
+    );
   }
 }

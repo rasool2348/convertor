@@ -34,12 +34,8 @@
             item.controls['toReadOnly'].setValue(
               !item.controls['toReadOnly'].value
             );
-            item.controls['from'].setValue(
-              ''
-            );
-            item.controls['to'].setValue(
-              ''
-            );
+            item.controls['from'].setValue('');
+            item.controls['to'].setValue('')
           "
         >
           <mat-icon
@@ -75,6 +71,6 @@
     </mat-card>
   </ng-container>
   <div class="logs">
-    <p *ngFor="let log of histories">{{log}}</p>
+    <p *ngFor="let log of histories">{{ log }}</p>
   </div>
 </form>
